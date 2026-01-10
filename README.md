@@ -61,6 +61,7 @@ reachy2-isaac-sim/
 4. Configure import settings (use default for best results)
 5. Click Import
 
+![reachy2_isaac_sim](./reachy2_isaacsim.png)
 
 ## File Descriptions
 
