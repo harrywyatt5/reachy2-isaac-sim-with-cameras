@@ -20,7 +20,7 @@ Reachy2 is a humanoid robot with:
 ## Repository Structure
 
 ```
-reachy2_isaac_repo/
+reachy2-isaac-sim/
 ├── meshes/                           # Robot mesh files (29 MB)
 │   ├── *_visual.dae                  # High-detail visual meshes
 │   └── *_collider.dae                # Collision meshes for physics
@@ -32,8 +32,7 @@ reachy2_isaac_repo/
 │       ├── reachy2_isaac_robot.usd   # Robot structure
 │       └── reachy2_isaac_sensor.usd  # Sensor configurations
 ├── usd/
-│   ├── reachy2.usd                   # Scene with environment setup
-│   └── reachy2_robot_1.usd           # Alternative robot model
+│   ├── reachy2.usd                   # robot stage
 ├── reachy2_isaac.urdf                # URDF version (alternative)
 └── README.md
 ```
@@ -42,7 +41,7 @@ reachy2_isaac_repo/
 
 ### Prerequisites
 
-- NVIDIA Isaac Sim (tested with Isaac Sim 2023.1 or later)
+- NVIDIA Isaac Sim (tested with Isaac Sim 5.1.0)
 - NVIDIA Omniverse
 
 ### Loading the Robot in Isaac Sim
@@ -51,7 +50,7 @@ reachy2_isaac_repo/
 
 1. Open Isaac Sim
 2. Go to `File → Open`
-3. Navigate to `reachy2_isaac/reachy2_isaac.usd`
+3. Navigate to `reachy2_isaac/reachy2.usd`
 4. Click Open
 
 **Method 2: Load from URDF**
@@ -62,18 +61,12 @@ reachy2_isaac_repo/
 4. Configure import settings (use default for best results)
 5. Click Import
 
-**Method 3: Load Scene with Environment**
-
-1. Open Isaac Sim
-2. Go to `File → Open`
-3. Navigate to `usd/reachy2.usd`
-4. This includes the robot with basic lighting and camera setup
 
 ## File Descriptions
 
 ### Essential Files
 
-- **reachy2_isaac.usd**: Main entry point for loading the robot
+- **reachy2.usd**: Main entry point for loading the robot
 - **reachy2_isaac.urdf**: URDF version with mesh references
 - **meshes/*.dae**: All visual and collision mesh files (required)
 - **configuration/*.usd**: Physics, sensor, and geometry configurations
@@ -146,7 +139,7 @@ simulation_app.close()
 
 ## Contributing
 
-This is currently a backup and reference repository. Future contributions for control systems, behavior implementations, and improvements are welcome.
+This is currently reference repository. Future contributions for control systems, behavior implementations, and improvements are welcome.
 
 ## License
 
